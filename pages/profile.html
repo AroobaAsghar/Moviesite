@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage your CineVerse profile, watchlist, favorite movies, and continue watching history." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <title>Profile | CineVerse</title>
+    <link rel="preconnect" href="https://api.themoviedb.org" />
+    <link rel="preconnect" href="https://image.tmdb.org" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="profile">
+    <div class="site-shell">
+      <header id="siteHeader"></header>
+
+      <main>
+        <section class="page-hero profile-hero">
+          <div>
+            <p class="eyebrow">Your account</p>
+            <h1>Profile settings</h1>
+            <p>Fine-tune your watching preferences and curated collections.</p>
+          </div>
+        </section>
+
+        <section class="section profile-grid">
+          <div class="profile-card">
+            <h2>Account overview</h2>
+            <p id="profileName">Signed in</p>
+            <button class="btn btn-secondary" id="logoutBtn">Sign out</button>
+          </div>
+          <div class="profile-card">
+            <h2>Watchlist snapshot</h2>
+            <div id="profileList" class="stack-grid"></div>
+          </div>
+          <div class="profile-card">
+            <h2>Continue watching</h2>
+            <div id="historyList" class="stack-grid"></div>
+          </div>
+          <div class="profile-card">
+            <h2>Favorite movies</h2>
+            <div id="favoritesList" class="stack-grid"></div>
+          </div>
+          <div class="profile-card">
+            <h2>Profile settings</h2>
+            <label class="field">
+              <span>Display name</span>
+              <input type="text" value="Viewer" aria-label="Display name" />
+            </label>
+            <label class="field">
+              <span>Streaming quality</span>
+              <select aria-label="Streaming quality">
+                <option>Auto</option>
+                <option>Ultra HD</option>
+                <option>HD</option>
+              </select>
+            </label>
+          </div>
+        </section>
+      </main>
+
+      <footer id="siteFooter"></footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

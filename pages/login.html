@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in to CineVerse to manage your watchlist, favorites, profile, and continue watching history." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <title>Login | CineVerse</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="login">
+    <div class="auth-shell">
+      <form id="loginForm" class="auth-card">
+        <div class="brand-block">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Sign in to CineVerse</h1>
+        </div>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" required />
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" name="remember" />
+          <span>Remember me</span>
+        </label>
+        <button class="btn btn-primary" type="submit">Login</button>
+        <p class="form-status" aria-live="polite"></p>
+        <p class="auth-links">
+          <a href="signup.html">Create an account</a>
+          <a href="#" id="forgotPasswordLink">Forgot password?</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

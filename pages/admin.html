@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CineVerse admin dashboard for uploading and publishing movies." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <title>Admin Dashboard | CineVerse</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="admin">
+    <div class="site-shell">
+      <header id="siteHeader"></header>
+
+      <main>
+        <section class="page-hero">
+          <div>
+            <p class="eyebrow">Admin dashboard</p>
+            <h1>Upload and publish movies.</h1>
+            <p>Add your own video files, posters, backdrops, and metadata to the CineVerse catalog.</p>
+          </div>
+        </section>
+
+        <section class="section admin-layout">
+          <form id="movieUploadForm" class="details-card upload-form">
+            <h2>Movie upload</h2>
+            <label class="field">
+              <span>Title</span>
+              <input type="text" name="title" required />
+            </label>
+            <label class="field">
+              <span>Description</span>
+              <textarea name="description" rows="5" required></textarea>
+            </label>
+            <div class="filters-panel compact upload-fields">
+              <label class="field">
+                <span>Genre</span>
+                <input type="text" name="genre" placeholder="Action" required />
+              </label>
+              <label class="field">
+                <span>Year</span>
+                <input type="number" name="releaseYear" min="1900" max="2100" />
+              </label>
+              <label class="field">
+                <span>Duration</span>
+                <input type="text" name="duration" placeholder="1h 48m" />
+              </label>
+              <label class="field">
+                <span>Rating</span>
+                <input type="number" name="rating" min="0" max="10" step="0.1" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Movie video file</span>
+              <input type="file" name="videoFile" accept="video/mp4,video/webm,video/ogg" required />
+            </label>
+            <label class="field">
+              <span>Poster image</span>
+              <input type="file" name="posterFile" accept="image/png,image/jpeg,image/webp" />
+            </label>
+            <label class="field">
+              <span>Backdrop image</span>
+              <input type="file" name="backdropFile" accept="image/png,image/jpeg,image/webp" />
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" name="isPublished" checked />
+              <span>Publish immediately</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Upload movie</button>
+            <p class="form-status" id="uploadStatus" aria-live="polite"></p>
+          </form>
+
+          <aside class="details-card">
+            <h2>Uploaded movies</h2>
+            <div id="adminMovieList" class="stack-grid"></div>
+          </aside>
+        </section>
+      </main>
+
+      <footer id="siteFooter"></footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

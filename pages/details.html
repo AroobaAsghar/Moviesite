@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Watch trailers, view cast, ratings, genres, story details, and similar recommendations for movies and TV shows on CineVerse." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <meta property="og:title" content="Movie and TV Details | CineVerse" />
+    <meta property="og:description" content="Explore trailers, cast, story details, ratings, and similar movie recommendations on CineVerse." />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Movie and TV Details | CineVerse" />
+    <meta name="twitter:description" content="Explore trailers, cast, story details, ratings, and similar movie recommendations on CineVerse." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80" />
+    <title>Movie and TV Details | CineVerse</title>
+    <link rel="preconnect" href="https://api.themoviedb.org" />
+    <link rel="preconnect" href="https://image.tmdb.org" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="//www.youtube.com" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="details">
+    <div class="site-shell">
+      <header id="siteHeader"></header>
+
+      <main>
+        <section id="detailsHero" class="details-hero"></section>
+        <section class="section details-layout">
+          <div id="detailsContent"></div>
+          <aside class="details-sidebar">
+            <h3>Recommended for you</h3>
+            <div id="similarGrid" class="stack-grid"></div>
+          </aside>
+        </section>
+      </main>
+
+      <footer id="siteFooter"></footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>

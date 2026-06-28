@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create a CineVerse account to save movies, favorite TV shows, and continue watching across sessions." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <title>Signup | CineVerse</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="signup">
+    <div class="auth-shell">
+      <form id="signupForm" class="auth-card">
+        <div class="brand-block">
+          <p class="eyebrow">Start watching</p>
+          <h1>Create your account</h1>
+        </div>
+        <label class="field">
+          <span>Full name</span>
+          <input type="text" name="fullName" required />
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" required />
+        </label>
+        <button class="btn btn-primary" type="submit">Create account</button>
+        <p class="form-status" aria-live="polite"></p>
+        <p class="auth-links">
+          <a href="login.html">Already have an account?</a>
+        </p>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../js/app.js" defer></script>
+  </body>
+</html>
